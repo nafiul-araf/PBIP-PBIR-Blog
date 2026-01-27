@@ -54,7 +54,7 @@ table _Measure
 		displayFolder: Sales
 		lineageTag: 9421a983-7c8a-4d60-b852-d98c00ce3b8d
 
-	measure 'Total Customer' = DISTINCTCOUNT(DimCustomer[CustomerID])
+	measure 'Customer' = DISTINCTCOUNT(DimCustomer[CustomerID])
 		formatString: 0.00
 		lineageTag: 1bcfbbfa-024c-4a2c-b477-4440bd221b65
 

@@ -23,11 +23,11 @@
                       "Entity": "_Measure"
                     }
                   },
-                  "Property": "Total Customer"
+                  "Property": "Customer"
                 }
               },
-              "queryRef": "_Measure.Total Customer",
-              "nativeQueryRef": "Total Customer"
+              "queryRef": "_Measure.Customer",
+              "nativeQueryRef": "Customer"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measure"
                   }
                 },
-                "Property": "Total Customer"
+                "Property": "Customer"
               }
             },
             "direction": "Descending"
