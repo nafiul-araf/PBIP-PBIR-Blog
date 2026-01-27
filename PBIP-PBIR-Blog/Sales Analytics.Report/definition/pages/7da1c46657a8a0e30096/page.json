@@ -74,7 +74,9 @@
             }
           ]
         },
-        "howCreated": "Drillthrough"
+        "howCreated": "Drillthrough",
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true
       },
       {
         "name": "e981ee3e19d7b15544b6",
