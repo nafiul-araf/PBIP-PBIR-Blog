@@ -1,0 +1,44 @@
+table DimStore
+	lineageTag: aafa210b-35c3-4cd5-91f9-b3b409856fb1
+
+	column Store
+		dataType: string
+		lineageTag: 4402d0af-62a2-4912-9e6e-702e3694ec6e
+		summarizeBy: none
+		sourceColumn: Store
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: a22d9fad-c1b3-4759-8dcb-f1227ccb8ab8
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreKey
+		dataType: string
+		lineageTag: 8169746b-6ce1-484e-a06e-46641f73115f
+		summarizeBy: none
+		sourceColumn: StoreKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimStore = m
+		mode: import
+		source =
+				let
+				    Source = FlatFile,
+				    #"Added Index" = Table.AddIndexColumn(Source, "Index", 1, 1, Int64.Type),
+				    #"Inserted Merged Column" = Table.AddColumn(#"Added Index", "StoreKey", each Text.Combine({[Store], [Region], Text.From([Index], "en-US")}, "!!!"), type text),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Inserted Merged Column",{"Store", "Region", "StoreKey"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Other Columns",{"StoreKey", "Store", "Region"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Reordered Columns", {"StoreKey"})
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
