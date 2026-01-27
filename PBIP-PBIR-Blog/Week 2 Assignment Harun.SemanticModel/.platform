@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Week 2 Assignment Harun"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a310a3d5-4994-96bd-429c-48006a28041e"
+  }
+}

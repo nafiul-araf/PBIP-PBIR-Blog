@@ -1,0 +1,45 @@
+table DimProduct
+	lineageTag: 5039fa47-f8e7-449d-9dce-11412c807008
+
+	column ProductID
+		dataType: string
+		lineageTag: a344d28d-c0f9-4379-9fe4-938a43c106fa
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product
+		dataType: string
+		lineageTag: 64d73120-85ea-488c-b604-0ec831176b86
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: f26a2e2b-15b6-4044-bb64-b99adf8a2c5e
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProduct = m
+		mode: import
+		source =
+				let
+				    Source = FlatFile,
+				    #"Added Index" = Table.AddIndexColumn(Source, "Index", 1, 1, Int64.Type),
+				    #"Inserted Merged Column" = Table.AddColumn(#"Added Index", "StoreKey", each Text.Combine({[Store], [Region], Text.From([Index], "en-US")}, "!!!"), type text),
+				    #"Inserted Merged Column1" = Table.AddColumn(#"Inserted Merged Column", "DimProduct", each Text.Combine({[Product], [Category], Text.From([Index], "en-US")}, "|"), type text),
+				    #"Renamed Columns" = Table.RenameColumns(#"Inserted Merged Column1",{{"DimProduct", "ProductID"}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns",{"ProductID", "Product", "Category"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns", {"ProductID"})
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
