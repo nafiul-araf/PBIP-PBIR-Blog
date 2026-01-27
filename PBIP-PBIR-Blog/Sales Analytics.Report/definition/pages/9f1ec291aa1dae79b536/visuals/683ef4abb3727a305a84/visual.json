@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "683ef4abb3727a305a84",
   "position": {
     "x": 630,
@@ -10,10 +10,10 @@
     "tabOrder": 9000
   },
   "visual": {
-    "visualType": "filledMap",
+    "visualType": "map",
     "query": {
       "queryState": {
-        "Category": {
+        "Series": {
           "projections": [
             {
               "field": {
@@ -27,12 +27,11 @@
                 }
               },
               "queryRef": "DimStore.Region",
-              "nativeQueryRef": "Region",
-              "active": true
+              "nativeQueryRef": "Region"
             }
           ]
         },
-        "Tooltips": {
+        "Size": {
           "projections": [
             {
               "field": {
@@ -78,26 +77,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "2L"
                 }
               }
             }
@@ -238,5 +217,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fbfae3f53290b15eb8c7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimStore"
+              }
+            },
+            "Property": "Region"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c3ad0f704b806c56d584",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measure"
+              }
+            },
+            "Property": "Profit Margin %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
