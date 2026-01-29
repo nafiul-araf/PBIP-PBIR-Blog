@@ -8,7 +8,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "2f0d22c0dd8829e4c126",
+        "name": "cea699b4549b26a65ea5",
         "field": {
           "Column": {
             "Expression": {
@@ -16,7 +16,7 @@
                 "Entity": "DimDate"
               }
             },
-            "Property": "Quarter"
+            "Property": "Month"
           }
         },
         "type": "Categorical",
@@ -41,7 +41,7 @@
                             "Source": "d"
                           }
                         },
-                        "Property": "Quarter"
+                        "Property": "Month"
                       }
                     }
                   ],
@@ -49,14 +49,56 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Q3'"
+                          "Value": "'Apr ''24'"
                         }
                       }
                     ],
                     [
                       {
                         "Literal": {
-                          "Value": "'Q2'"
+                          "Value": "'Aug ''24'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Dec ''24'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Feb ''24'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Jan ''24'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Jul ''24'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Jun ''24'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Mar ''24'"
                         }
                       }
                     ]

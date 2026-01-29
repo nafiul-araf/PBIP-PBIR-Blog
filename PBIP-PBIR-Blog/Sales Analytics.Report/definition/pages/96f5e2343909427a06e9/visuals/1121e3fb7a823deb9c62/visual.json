@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "1121e3fb7a823deb9c62",
   "position": {
     "x": 778,
@@ -23,11 +23,11 @@
                       "Entity": "_Measure"
                     }
                   },
-                  "Property": "Customer"
+                  "Property": "Total Customer"
                 }
               },
-              "queryRef": "_Measure.Customer",
-              "nativeQueryRef": "Customer"
+              "queryRef": "_Measure.Total Customer",
+              "nativeQueryRef": "Total Customer"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measure"
                   }
                 },
-                "Property": "Customer"
+                "Property": "Total Customer"
               }
             },
             "direction": "Descending"
@@ -215,23 +215,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "fd86d0a3303854014306",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measure"
-              }
-            },
-            "Property": "Customer"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

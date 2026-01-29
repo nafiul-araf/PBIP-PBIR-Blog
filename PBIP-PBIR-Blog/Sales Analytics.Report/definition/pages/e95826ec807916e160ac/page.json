@@ -8,15 +8,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "3941dfac87bb08b720a7",
+        "name": "ab2d5b0c474d09db90d8",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DimProduct"
+                "Entity": "DimCustomer"
               }
             },
-            "Property": "Category"
+            "Property": "CustomerName"
           }
         },
         "type": "Categorical",
@@ -25,49 +25,102 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "DimProduct",
+              "Entity": "DimCustomer",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d"
+                              }
+                            },
+                            "Property": "CustomerName"
                           }
-                        },
-                        "Property": "Category"
-                      }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Alisha'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Ashlee'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Bob'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Brady'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Caitlyn'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Cassie'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Cesar'"
+                            }
+                          }
+                        ]
+                      ]
                     }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Beverage'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Burger'"
-                        }
-                      }
-                    ]
-                  ]
+                  }
                 }
               }
             }
           ]
         },
         "howCreated": "User",
-        "isLockedInViewMode": true
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   },

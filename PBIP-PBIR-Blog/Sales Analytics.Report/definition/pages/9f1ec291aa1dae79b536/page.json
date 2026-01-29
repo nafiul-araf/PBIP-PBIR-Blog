@@ -8,66 +8,19 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "6a9e08f5ab328697e385",
+        "name": "70977139d11687144c33",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "DimDate"
+                "Entity": "DimStore"
               }
             },
-            "Property": "Weekday"
+            "Property": "Region"
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "d",
-              "Entity": "DimDate",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Property": "Weekday"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Saturday'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Monday'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "isHiddenInViewMode": true
+        "howCreated": "User"
       }
     ]
   },
@@ -106,19 +59,6 @@
             "expr": {
               "Literal": {
                 "Value": "0D"
-              }
-            }
-          }
-        }
-      }
-    ],
-    "outspacePane": [
-      {
-        "properties": {
-          "width": {
-            "expr": {
-              "Literal": {
-                "Value": "231L"
               }
             }
           }
