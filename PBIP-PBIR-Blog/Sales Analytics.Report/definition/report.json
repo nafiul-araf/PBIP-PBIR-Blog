@@ -23,12 +23,12 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "f2842889736b6dd0b0ae",
+        "name": "d5c588bde2548129d7ee",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "FactSales"
+                "Entity": "DimStore"
               }
             },
             "Property": "Region"
@@ -39,8 +39,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "f",
-              "Entity": "FactSales",
+              "Name": "d",
+              "Entity": "DimStore",
               "Type": 0
             }
           ],
@@ -53,7 +53,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "f"
+                            "Source": "d"
                           }
                         },
                         "Property": "Region"
@@ -64,7 +64,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Delight'"
+                          "Value": "'Hub'"
                         }
                       }
                     ]
@@ -74,9 +74,7 @@
             }
           ]
         },
-        "howCreated": "User",
-        "isHiddenInViewMode": true,
-        "isLockedInViewMode": true
+        "howCreated": "User"
       }
     ]
   },

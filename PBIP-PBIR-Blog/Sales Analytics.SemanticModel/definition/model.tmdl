@@ -14,7 +14,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_QueryOrder = ["StartDate","EndDate","Sources","Fiscal Year Reset","FlatFile","FactSales","DimCustomer","DimStore","DimProduct","DimDate"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop"]
 
 ref table DateTableTemplate_869be93c-5c5a-49be-9390-d0d993d191e3
 ref table FactSales
@@ -26,6 +26,10 @@ ref table DimCustomer
 ref table LocalDateTable_35bf8692-acde-4fb7-a27a-f4c056f16d35
 ref table LocalDateTable_a851f161-8615-4dfa-952f-5ecb2f0712ef
 ref table _Measure
+
+ref role David
+ref role Lisa
+ref role Daniel
 
 ref cultureInfo en-US
 

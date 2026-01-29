@@ -1,0 +1,7 @@
+role Daniel
+	modelPermission: read
+
+	tablePermission DimCustomer = [CustomerName] == "Daniel"
+
+	annotation PBI_Id = 26cdb11bb6994c86af54c9d8d6fb3e99
+
