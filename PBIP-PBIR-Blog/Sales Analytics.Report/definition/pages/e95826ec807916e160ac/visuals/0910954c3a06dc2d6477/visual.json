@@ -7,7 +7,7 @@
     "z": 8000,
     "height": 448.55229547808079,
     "width": 596.47911632723515,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "tableEx",
@@ -297,51 +297,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4e9cb799927b20cb3808",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimCustomer"
-              }
-            },
-            "Property": "CustomerName"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "88341410b5c6d2e27d25",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measure"
-              }
-            },
-            "Property": "Total Rating"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "267622dbd915e60d0c50",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measure"
-              }
-            },
-            "Property": "Average Rating"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

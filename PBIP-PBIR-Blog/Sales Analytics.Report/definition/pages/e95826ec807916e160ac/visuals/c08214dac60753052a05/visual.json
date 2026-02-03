@@ -7,7 +7,7 @@
     "z": 9000,
     "height": 450,
     "width": 600,
-    "tabOrder": 8000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "tableEx",
@@ -253,65 +253,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "26a8894582510323283e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimCustomer"
-              }
-            },
-            "Property": "CustomerName"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "2287f64d85d174c97580",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measure"
-              }
-            },
-            "Property": "Total Sales"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0ecc2525ddece5dc9ace",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measure"
-              }
-            },
-            "Property": "Total Profit"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2eeb10cc47b0a279764d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measure"
-              }
-            },
-            "Property": "Profit Margin %"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
