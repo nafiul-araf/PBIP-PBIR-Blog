@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "e9019da2034dadc36d97",
   "position": {
-    "x": 242.23762664210577,
-    "y": 45.667749284987153,
+    "x": 0,
+    "y": 0,
     "z": 0,
-    "height": 675.08846769111437,
-    "width": 542.0563284696301,
+    "height": 720.75621697610154,
+    "width": 599.63740365504873,
     "tabOrder": 0
   },
   "visual": {
@@ -71,37 +71,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3f810cc42d31d19caca3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimCustomer"
-              }
-            },
-            "Property": "CustomerName"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "9e49ac787a5f2a5130a3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measure"
-              }
-            },
-            "Property": "Total Cost"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

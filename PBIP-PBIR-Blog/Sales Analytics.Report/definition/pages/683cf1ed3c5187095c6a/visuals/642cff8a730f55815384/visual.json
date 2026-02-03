@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "7d8a3fb683e030bb8829",
+  "name": "642cff8a730f55815384",
   "position": {
-    "x": 1476,
-    "y": 15,
-    "z": 2000,
+    "x": 0,
+    "y": 0,
+    "z": 7000,
     "height": 100,
-    "width": 206.66666666666669,
-    "tabOrder": 11000
+    "width": 206.25,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "DimStore"
                     }
                   },
-                  "Property": "Region"
+                  "Property": "Store"
                 }
               },
-              "queryRef": "DimStore.Region",
-              "nativeQueryRef": "Region",
+              "queryRef": "DimStore.Store",
+              "nativeQueryRef": "Store",
               "active": true
             }
           ]
@@ -54,7 +54,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Region'"
+                  "Value": "'Store'"
                 }
               }
             },
@@ -188,5 +188,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "c3562b5fd6fecde9aca4"
 }

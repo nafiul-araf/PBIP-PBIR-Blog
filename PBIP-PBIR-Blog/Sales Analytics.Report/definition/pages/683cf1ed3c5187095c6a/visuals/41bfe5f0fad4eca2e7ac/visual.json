@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "7d8a3fb683e030bb8829",
+  "name": "41bfe5f0fad4eca2e7ac",
   "position": {
-    "x": 1476,
-    "y": 15,
-    "z": 2000,
+    "x": 221.9999999999996,
+    "y": 0,
+    "z": 6000,
     "height": 100,
     "width": 206.66666666666669,
-    "tabOrder": 11000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DimStore"
+                      "Entity": "DimProduct"
                     }
                   },
-                  "Property": "Region"
+                  "Property": "Category"
                 }
               },
-              "queryRef": "DimStore.Region",
-              "nativeQueryRef": "Region",
+              "queryRef": "DimProduct.Category",
+              "nativeQueryRef": "Category",
               "active": true
             }
           ]
@@ -54,7 +54,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Region'"
+                  "Value": "'Category'"
                 }
               }
             },
@@ -67,6 +67,13 @@
                       "Percent": -0.1
                     }
                   }
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -188,5 +195,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "c3562b5fd6fecde9aca4"
 }
